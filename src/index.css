@@ -1,13 +1,31 @@
+/* Add styling for the "Rematch" dropdown */
+.selection-container {
+  margin-bottom: 20px;
+}
+
+.selection-container label {
+  margin-right: 10px;
+}
+
+.selection-container select {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+/* Adjust styling for the table */
 table {
   border-collapse: collapse;
   width: 50%;
   margin: auto;
+  margin-top: 20px; /* Add some space between the dropdowns and the table */
 }
+
 th, td {
   border: 1px solid black;
   padding: 8px;
   text-align: left;
 }
+
 th {
   background-color: #f2f2f2;
 }

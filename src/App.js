@@ -29,75 +29,51 @@ const YourComponent = () => {
     // Event handler for game selection
     const handleGameChange = (event) => {
         setSelectedGame(event.target.value);
-        setSelectedCity(''); // Reset city when game changes
-        setSelectedGymLeader(''); // Reset gym leader when game changes
-        setSelectedPokemon(''); // Reset Pokémon when game changes
-        setPokemonInfo(null); // Reset Pokémon info when game changes
-        setPokemonImage(null); // Reset Pokémon image when game changes
+        setSelectedCity('');
+        setSelectedGymLeader('');
+        setSelectedPokemon('');
+        setSelectedRematch('');
+        setPokemonInfo(null);
+        setPokemonImage(null);
     };
 
     // Event handler for rematch selection
     const handleRematchChange = (event) => {
         setSelectedRematch(event.target.value);
+        if (selectedPokemon != null && Object.keys(gameData.Game[selectedGame][selectedCity][selectedGymLeader][event.target.value]['Pokemon Name']).includes(selectedPokemon)) {
+            setPokemonInfo(gameData.Game[selectedGame][selectedCity][selectedGymLeader][event.target.value]['Pokemon Name'][selectedPokemon]);
+            setPokemonImage(require(`/users/minnietang/Documents/udacity-git-course/PokemonCounters/pokemon_counters/src/Assets/${selectedPokemon.toLowerCase()}.png`)); // Adjust the path as per your folder structure
+        } else {
+            setPokemonInfo(null);
+            setPokemonImage(null);
+        }
     };
 
     // Event handler for city selection
     const handleCityChange = (event) => {
         setSelectedCity(event.target.value);
-        setSelectedGymLeader(''); // Reset gym leader when city changes
-        setSelectedPokemon(''); // Reset Pokémon when city changes
-        setPokemonInfo(null); // Reset Pokémon info when city changes
-        setPokemonImage(null); // Reset Pokémon image when city changes
+        setSelectedGymLeader('');
+        setSelectedPokemon('');
+        setSelectedRematch('');
+        setPokemonInfo(null);
+        setPokemonImage(null);
     };
 
     // Event handler for gym leader selection
     const handleGymLeaderChange = (event) => {
         setSelectedGymLeader(event.target.value);
-        setSelectedPokemon(''); // Reset Pokémon when gym leader changes
-        setPokemonInfo(null); // Reset Pokémon info when gym leader changes
-        setPokemonImage(null); // Reset Pokémon image when gym leader changes
+        setSelectedPokemon('');
+        setSelectedRematch('');
+        setPokemonInfo(null);
+        setPokemonImage(null);
     };
 
     // Event handler for Pokémon selection
     const handlePokemonChange = (event) => {
         setSelectedPokemon(event.target.value);
-        // Set Pokémon info based on the selection
-        setPokemonInfo(gameData.Game[selectedGame][selectedCity][selectedGymLeader]['Pokemon Name'][event.target.value]);
-        // Set Pokémon image based on the selected Pokemon's name matching with the image name
+        setPokemonInfo(gameData.Game[selectedGame][selectedCity][selectedGymLeader][selectedRematch]['Pokemon Name'][event.target.value]);
         setPokemonImage(require(`/users/minnietang/Documents/udacity-git-course/PokemonCounters/pokemon_counters/src/Assets/${event.target.value.toLowerCase()}.png`)); // Adjust the path as per your folder structure
     };
-
-    // Render game options for the first dropdown
-    const gameOptions = Object.keys(gameData.Game || {}).map(game => (
-        <option key={game} value={game}>{game}</option>
-    ));
-
-    // Render rematch options for the second dropdown
-    const rematchOptions = (
-        <div>
-            <label style={{ marginRight: '10px' }}>Rematch:</label>
-            <select value={selectedRematch} onChange={handleRematchChange}>
-                <option value="">Select</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select>
-        </div>
-    );
-
-    // Render city options for the third dropdown based on the selected game
-    const cityOptions = selectedGame ? Object.keys(gameData.Game[selectedGame] || {}).map(city => (
-        <option key={city} value={city}>{city}</option>
-    )) : null;
-
-    // Render gym leader options for the fourth dropdown based on the selected game
-    const gymLeaderOptions = selectedCity ? Object.keys(gameData.Game[selectedGame][selectedCity] || {}).map(gymLeader => (
-        <option key={gymLeader} value={gymLeader}>{gymLeader}</option>
-    )) : null;
-
-    // Render Pokémon options for the fifth dropdown based on the selected gym leader
-    const pokemonOptions = selectedGymLeader ? Object.keys(gameData.Game[selectedGame][selectedCity][selectedGymLeader]['Pokemon Name'] || {}).map(pokemon => (
-        <option key={pokemon} value={pokemon}>{pokemon}</option>
-    )) : null;
 
     return (
         <div style={{ textAlign: 'center', marginTop: '100px' }}>
@@ -106,39 +82,49 @@ const YourComponent = () => {
                     <label style={{ marginRight: '10px' }}>Select Game:</label>
                     <select value={selectedGame} onChange={handleGameChange}>
                         <option value="">Select a game</option>
-                        {gameOptions}
+                        {Object.keys(gameData.Game || {}).map(game => (
+                            <option key={game} value={game}>{game}</option>
+                        ))}
                     </select>
                 </div>
-                {selectedGame && rematchOptions}
-                {selectedGame && (
-                    <div style={{ marginRight: '20px' }}>
-                        <label style={{ marginRight: '10px' }}>Select City:</label>
-                        <select value={selectedCity} onChange={handleCityChange}>
-                            <option value="">Select a city</option>
-                            {cityOptions}
-                        </select>
-                    </div>
-                )}
-                {selectedCity && (
-                    <div style={{ marginRight: '20px' }}>
-                        <label style={{ marginRight: '10px' }}>Select Gym Leader:</label>
-                        <select value={selectedGymLeader} onChange={handleGymLeaderChange}>
-                            <option value="">Select a gym leader</option>
-                            {gymLeaderOptions}
-                        </select>
-                    </div>
-                )}
-                {selectedGymLeader && (
-                    <div>
-                        <label style={{ marginRight: '10px' }}>Select Pokemon:</label>
-                        <select value={selectedPokemon} onChange={handlePokemonChange}>
-                            <option value="">Select a Pokémon</option>
-                            {pokemonOptions}
-                        </select>
-                    </div>
-                )}
+                <div style={{ marginRight: '20px' }}>
+                    <label style={{ marginRight: '10px' }}>Select City:</label>
+                    <select value={selectedCity} onChange={handleCityChange}>
+                        <option value="">Select a city</option>
+                        {selectedGame && Object.keys(gameData.Game[selectedGame] || {}).map(city => (
+                            <option key={city} value={city}>{city}</option>
+                        ))}
+                    </select>
+                </div>
+                <div style={{ marginRight: '20px' }}>
+                    <label style={{ marginRight: '10px' }}>Select Gym Leader:</label>
+                    <select value={selectedGymLeader} onChange={handleGymLeaderChange}>
+                        <option value="">Select a gym leader</option>
+                        {selectedCity && Object.keys(gameData.Game[selectedGame][selectedCity] || {}).map(gymLeader => (
+                            <option key={gymLeader} value={gymLeader}>{gymLeader}</option>
+                        ))}
+                    </select>
+                </div>
+                <div style={{ marginRight: '20px' }}>
+                    <label style={{ marginRight: '10px' }}>Rematch:</label>
+                    <select value={selectedRematch} onChange={handleRematchChange}>
+                        <option value="">Select</option>
+                        {selectedGymLeader && Object.keys(gameData.Game[selectedGame][selectedCity][selectedGymLeader] || {}).map(rematchOption => (
+                            <option key={rematchOption} value={rematchOption}>{rematchOption}</option>))}
+                    </select>
+                </div>
+                <div>
+                    <label style={{ marginRight: '10px' }}>Select Pokemon:</label>
+                    <select value={selectedPokemon} onChange={handlePokemonChange}>
+                        <option value="">Select a Pokémon</option>
+                        {selectedGymLeader && selectedRematch && Object.keys(gameData.Game[selectedGame][selectedCity][selectedGymLeader][selectedRematch]['Pokemon Name'] || {}).map(pokemon => (
+                            <option key={pokemon} value={pokemon}>{pokemon}</option>
+                        ))}
+                    </select>
+                </div>
             </div>
 
+            {/* Display information section */}
             {pokemonInfo && (
                 <div>
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
@@ -180,10 +166,6 @@ const YourComponent = () => {
                         <tr>
                             <td>Pokemon Countered by</td>
                             <td>{pokemonInfo['Pokemon Countered by']}</td>
-                        </tr>
-                        <tr>
-                            <td>Rematch</td>
-                            <td>{selectedRematch}</td>
                         </tr>
                         </tbody>
                     </table>
