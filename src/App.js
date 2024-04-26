@@ -40,7 +40,7 @@ const YourComponent = () => {
         setSelectedCity(event.target.value);
         setSelectedGymLeader(''); // Reset gym leader when city changes
         setSelectedPokemon(''); // Reset Pokémon when city changes
-        setPokemonInfo(null); // Reset Pokém on info when city changes
+        setPokemonInfo(null); // Reset Pokémon info when city changes
         setPokemonImage(null); // Reset Pokémon image when city changes
     };
 
