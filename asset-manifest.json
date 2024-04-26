@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pokemoncounter_frontend/static/css/main.37609526.css",
-    "main.js": "/pokemoncounter_frontend/static/js/main.630ce335.js",
+    "main.css": "/pokemoncounter_frontend/static/css/main.0e703c43.css",
+    "main.js": "/pokemoncounter_frontend/static/js/main.a3d86108.js",
     "static/js/453.3772c06f.chunk.js": "/pokemoncounter_frontend/static/js/453.3772c06f.chunk.js",
     "static/media/onix.png": "/pokemoncounter_frontend/static/media/onix.cffd01a974a516540fc0.png",
     "static/media/gastrodon.png": "/pokemoncounter_frontend/static/media/gastrodon.e35e36b63ea2c528df2c.png",
@@ -85,12 +85,12 @@
     "static/media/lucario.png": "/pokemoncounter_frontend/static/media/lucario.bb9a9ceefa8c85db84d2.png",
     "static/media/aerodactyl.png": "/pokemoncounter_frontend/static/media/aerodactyl.2b12d955b6e1630f6a0a.png",
     "index.html": "/pokemoncounter_frontend/index.html",
-    "main.37609526.css.map": "/pokemoncounter_frontend/static/css/main.37609526.css.map",
-    "main.630ce335.js.map": "/pokemoncounter_frontend/static/js/main.630ce335.js.map",
+    "main.0e703c43.css.map": "/pokemoncounter_frontend/static/css/main.0e703c43.css.map",
+    "main.a3d86108.js.map": "/pokemoncounter_frontend/static/js/main.a3d86108.js.map",
     "453.3772c06f.chunk.js.map": "/pokemoncounter_frontend/static/js/453.3772c06f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37609526.css",
-    "static/js/main.630ce335.js"
+    "static/css/main.0e703c43.css",
+    "static/js/main.a3d86108.js"
   ]
 }
