@@ -8,6 +8,7 @@ const YourComponent = () => {
     const [selectedPokemon, setSelectedPokemon] = useState('');
     const [pokemonInfo, setPokemonInfo] = useState(null);
     const [pokemonImage, setPokemonImage] = useState(null); // State to store Pokemon image
+    const [selectedRematch, setSelectedRematch] = useState('');
 
     useEffect(() => {
         // Fetch data from the backend serverless API endpoint
@@ -33,6 +34,11 @@ const YourComponent = () => {
         setSelectedPokemon(''); // Reset Pokémon when game changes
         setPokemonInfo(null); // Reset Pokémon info when game changes
         setPokemonImage(null); // Reset Pokémon image when game changes
+    };
+
+    // Event handler for rematch selection
+    const handleRematchChange = (event) => {
+        setSelectedRematch(event.target.value);
     };
 
     // Event handler for city selection
@@ -66,17 +72,29 @@ const YourComponent = () => {
         <option key={game} value={game}>{game}</option>
     ));
 
-    // Render city options for the second dropdown based on the selected game
+    // Render rematch options for the second dropdown
+    const rematchOptions = (
+        <div>
+            <label style={{ marginRight: '10px' }}>Rematch:</label>
+            <select value={selectedRematch} onChange={handleRematchChange}>
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+    );
+
+    // Render city options for the third dropdown based on the selected game
     const cityOptions = selectedGame ? Object.keys(gameData.Game[selectedGame] || {}).map(city => (
         <option key={city} value={city}>{city}</option>
     )) : null;
 
-    // Render gym leader options for the third dropdown based on the selected game
+    // Render gym leader options for the fourth dropdown based on the selected game
     const gymLeaderOptions = selectedCity ? Object.keys(gameData.Game[selectedGame][selectedCity] || {}).map(gymLeader => (
         <option key={gymLeader} value={gymLeader}>{gymLeader}</option>
     )) : null;
 
-    // Render Pokémon options for the fourth dropdown based on the selected gym leader
+    // Render Pokémon options for the fifth dropdown based on the selected gym leader
     const pokemonOptions = selectedGymLeader ? Object.keys(gameData.Game[selectedGame][selectedCity][selectedGymLeader]['Pokemon Name'] || {}).map(pokemon => (
         <option key={pokemon} value={pokemon}>{pokemon}</option>
     )) : null;
@@ -91,6 +109,7 @@ const YourComponent = () => {
                         {gameOptions}
                     </select>
                 </div>
+                {selectedGame && rematchOptions}
                 {selectedGame && (
                     <div style={{ marginRight: '20px' }}>
                         <label style={{ marginRight: '10px' }}>Select City:</label>
@@ -161,6 +180,10 @@ const YourComponent = () => {
                         <tr>
                             <td>Pokemon Countered by</td>
                             <td>{pokemonInfo['Pokemon Countered by']}</td>
+                        </tr>
+                        <tr>
+                            <td>Rematch</td>
+                            <td>{selectedRematch}</td>
                         </tr>
                         </tbody>
                     </table>
