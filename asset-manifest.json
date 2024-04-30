@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/pokemoncounter_frontend/static/css/main.81812e72.css",
-    "main.js": "/pokemoncounter_frontend/static/js/main.2e56a7ee.js",
+    "main.js": "/pokemoncounter_frontend/static/js/main.c06e6f54.js",
     "static/js/453.3772c06f.chunk.js": "/pokemoncounter_frontend/static/js/453.3772c06f.chunk.js",
     "static/media/onix.png": "/pokemoncounter_frontend/static/media/onix.cffd01a974a516540fc0.png",
     "static/media/electrode.png": "/pokemoncounter_frontend/static/media/electrode.5bba1aed156d052467ed.png",
+    "static/media/aggron.png": "/pokemoncounter_frontend/static/media/aggron.22fd5db87fd311ce009f.png",
     "static/media/tangela.png": "/pokemoncounter_frontend/static/media/tangela.fbd6ecd1c80e25e27b2b.png",
     "static/media/spiritomb.png": "/pokemoncounter_frontend/static/media/spiritomb.8cf9ffdf4bd07e251a2a.png",
     "static/media/torterra.png": "/pokemoncounter_frontend/static/media/torterra.31091bfed5e382f6a986.png",
@@ -17,6 +18,7 @@
     "static/media/bastiodon.png": "/pokemoncounter_frontend/static/media/bastiodon.2bd208a44f0e777a619a.png",
     "static/media/abomasnow.png": "/pokemoncounter_frontend/static/media/abomasnow.5d02cde62483bef2b43f.png",
     "static/media/exeggutor.png": "/pokemoncounter_frontend/static/media/exeggutor.136db7305a950eed08f3.png",
+    "static/media/machoke.png": "/pokemoncounter_frontend/static/media/machoke.9e24c10e32317c5e1f40.png",
     "static/media/magneton.png": "/pokemoncounter_frontend/static/media/magneton.dfce446027d9451eeed1.png",
     "static/media/ninetales.png": "/pokemoncounter_frontend/static/media/ninetales.2d4d47f72b5db3a9608f.png",
     "static/media/arbok.png": "/pokemoncounter_frontend/static/media/arbok.9d4864e8eff4ce56ad44.png",
@@ -33,7 +35,7 @@
     "static/media/tentacruel.png": "/pokemoncounter_frontend/static/media/tentacruel.0e7e011d90a9ff848f8d.png",
     "static/media/vaporeon.png": "/pokemoncounter_frontend/static/media/vaporeon.d36352de434532422dff.png",
     "static/media/tyranitar.png": "/pokemoncounter_frontend/static/media/tyranitar.4ed8de26ad55dabeb9c4.png",
-    "static/media/vesqpiquen.png": "/pokemoncounter_frontend/static/media/vesqpiquen.38eee73bafa120d3a861.png",
+    "static/media/vespiquen.png": "/pokemoncounter_frontend/static/media/vespiquen.38eee73bafa120d3a861.png",
     "static/media/electivire.png": "/pokemoncounter_frontend/static/media/electivire.80366bf677e5e9331c23.png",
     "static/media/ludicolo.png": "/pokemoncounter_frontend/static/media/ludicolo.329a3061e0856f12cb70.png",
     "static/media/jynx.png": "/pokemoncounter_frontend/static/media/jynx.2ee085df6a5c459de89d.png",
@@ -44,6 +46,7 @@
     "static/media/gliscor.png": "/pokemoncounter_frontend/static/media/gliscor.016c9d056b383a28e765.png",
     "static/media/dugtrio.png": "/pokemoncounter_frontend/static/media/dugtrio.22bfded4cfe92c16218e.png",
     "static/media/hitmontop.png": "/pokemoncounter_frontend/static/media/hitmontop.94149eda6403cacb11ad.png",
+    "static/media/bronzor.png": "/pokemoncounter_frontend/static/media/bronzor.d5b28870236524e6facb.png",
     "static/media/jolteon.png": "/pokemoncounter_frontend/static/media/jolteon.be1f230a1b892c0e3185.png",
     "static/media/flareon.png": "/pokemoncounter_frontend/static/media/flareon.2e6cfdfbbb95109dd759.png",
     "static/media/garchomp.png": "/pokemoncounter_frontend/static/media/garchomp.3abe5bbea1741ac7fe3b.png",
@@ -111,6 +114,7 @@
     "static/media/psyduck.png": "/pokemoncounter_frontend/static/media/psyduck.9be0a37e22de0338e320.png",
     "static/media/relicanth.png": "/pokemoncounter_frontend/static/media/relicanth.1220c19c46b606655085.png",
     "static/media/drapion.png": "/pokemoncounter_frontend/static/media/drapion.c2f92b33787ab9d2af0b.png",
+    "static/media/magnezone.png": "/pokemoncounter_frontend/static/media/magnezone.f1b8715a1930ba682055.png",
     "static/media/venomoth.png": "/pokemoncounter_frontend/static/media/venomoth.3e92455af6af0f2bb797.png",
     "static/media/golbat.png": "/pokemoncounter_frontend/static/media/golbat.a08c6ddc03e85fdcfe20.png",
     "static/media/espeon.png": "/pokemoncounter_frontend/static/media/espeon.4a4f185f4401c70a1245.png",
@@ -141,11 +145,11 @@
     "static/media/exeggutor - alola form.png": "/pokemoncounter_frontend/static/media/exeggutor - alola form.9799464590bd0f959c45.png",
     "index.html": "/pokemoncounter_frontend/index.html",
     "main.81812e72.css.map": "/pokemoncounter_frontend/static/css/main.81812e72.css.map",
-    "main.2e56a7ee.js.map": "/pokemoncounter_frontend/static/js/main.2e56a7ee.js.map",
+    "main.c06e6f54.js.map": "/pokemoncounter_frontend/static/js/main.c06e6f54.js.map",
     "453.3772c06f.chunk.js.map": "/pokemoncounter_frontend/static/js/453.3772c06f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.81812e72.css",
-    "static/js/main.2e56a7ee.js"
+    "static/js/main.c06e6f54.js"
   ]
 }
