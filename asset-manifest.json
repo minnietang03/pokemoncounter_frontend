@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pokemoncounter_frontend/static/css/main.81812e72.css",
-    "main.js": "/pokemoncounter_frontend/static/js/main.2f8c453b.js",
+    "main.js": "/pokemoncounter_frontend/static/js/main.f5ce96f5.js",
     "static/js/453.3772c06f.chunk.js": "/pokemoncounter_frontend/static/js/453.3772c06f.chunk.js",
     "static/media/onix.png": "/pokemoncounter_frontend/static/media/onix.cffd01a974a516540fc0.png",
     "static/media/electrode.png": "/pokemoncounter_frontend/static/media/electrode.5bba1aed156d052467ed.png",
@@ -137,7 +137,7 @@
     "static/media/lucario.png": "/pokemoncounter_frontend/static/media/lucario.567f9d3b282e1b75136b.png",
     "static/media/togekiss.png": "/pokemoncounter_frontend/static/media/togekiss.cba541234f05445577a8.png",
     "static/media/aerodactyl.png": "/pokemoncounter_frontend/static/media/aerodactyl.d051d37df697c0b0007f.png",
-    "static/media/jolteon:raichu.png": "/pokemoncounter_frontend/static/media/jolteon:raichu.6f1d228856bbd8768ba1.png",
+    "static/media/jolteon or raichu.png": "/pokemoncounter_frontend/static/media/jolteon or raichu.6f1d228856bbd8768ba1.png",
     "static/media/golem - alola form.png": "/pokemoncounter_frontend/static/media/golem - alola form.9f478979899ba8d94888.png",
     "static/media/mega charizard x.png": "/pokemoncounter_frontend/static/media/mega charizard x.abdfd4eea6e70526bcf4.png",
     "static/media/sandslash - alola form.png": "/pokemoncounter_frontend/static/media/sandslash - alola form.b5658ea4222ca163575a.png",
@@ -146,11 +146,11 @@
     "static/media/exeggutor - alola form.png": "/pokemoncounter_frontend/static/media/exeggutor - alola form.9799464590bd0f959c45.png",
     "index.html": "/pokemoncounter_frontend/index.html",
     "main.81812e72.css.map": "/pokemoncounter_frontend/static/css/main.81812e72.css.map",
-    "main.2f8c453b.js.map": "/pokemoncounter_frontend/static/js/main.2f8c453b.js.map",
+    "main.f5ce96f5.js.map": "/pokemoncounter_frontend/static/js/main.f5ce96f5.js.map",
     "453.3772c06f.chunk.js.map": "/pokemoncounter_frontend/static/js/453.3772c06f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.81812e72.css",
-    "static/js/main.2f8c453b.js"
+    "static/js/main.f5ce96f5.js"
   ]
 }
