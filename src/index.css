@@ -1,4 +1,11 @@
-/* Add styling for the "Rematch" dropdown */
+body {
+  background-image: url('./website_background.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+}
+
 .selection-container {
   margin-bottom: 20px;
 }
@@ -12,12 +19,13 @@
   border: 1px solid black;
 }
 
-/* Adjust styling for the table */
 table {
   border-collapse: collapse;
   width: 50%;
   margin: auto;
   margin-top: 20px; /* Add some space between the dropdowns and the table */
+  background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background to the table */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the table */
 }
 
 th, td {
